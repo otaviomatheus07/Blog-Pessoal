@@ -1,4 +1,4 @@
-package org.blogpessoal.generation.blogpessoal.configuration;
+package org.generation.blog.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
@@ -14,26 +14,27 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
 public class SwaggerConfig {
-		
+
 	@Bean
+
 	public OpenAPI springBlogPessoalOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-					.title("Projeto Blog Pessoal")
-					.description("Projeto Blog Pessoal - Generation Brasil")
-					.version("v0.0.1")
+				.title("Projeto Blog Pessoal")
+				.description("Projeto Blog Pessoal - Generation Brasil")
+				.version("v0.0.1")
 				.license(new License()
-					.name("Generation Brasil")
-					.url("https://brazil.generation.org/"))
+				.name("Otavio Matheus")
+				.url("https://www.linkedin.com/in/otavio-matheus-adm/"))
 				.contact(new Contact()
-					.name("Christian Patrick")
-					.url("https://www.linkedin.com/in/christian-patrick-992816260/")
-					.email("christian.pcruz99@gmail.com")))
+				.name("Otavio Matheus")
+				.url("https://github.com/otaviomatheus07")
+				.email("oms.otavio@gmail.com")))
 				.externalDocs(new ExternalDocumentation()
-					.description("Github")
-					.url("https://github.com/ChrisPCruz99/BlogPessoal"));
-	}
-
+				.description("Github") 
+				.url("https://github.com/otaviomatheus07/Projeto-Blog-Pessoal"));
+		}
+	
 	@Bean
 	public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser() {
 
